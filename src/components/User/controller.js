@@ -20,7 +20,6 @@ async function findAll(req, res, next) {
 }
 
 async function findById (req, res, next) {
-    console.log(req.params);
     try {
         const { error } = UserValidation.findById(req.params);
 
@@ -108,8 +107,6 @@ async function create(req, res, next) {
 }
 
 async function updateById(req, res, next) {
-    console.log(req.body.id);
-    console.log(req.body);
     try {
         const { error } = UserValidation.updateById(req.body);
 
